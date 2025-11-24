@@ -29,6 +29,13 @@ body {
   border-bottom: 1px solid #e3dff0;
 }
 
+@media (max-width: 600px) {
+  .lb-header,
+  .lb-footer {
+    padding: 0.75rem 1rem;
+  }
+}
+
 /* Moon icon support */
 .lb-logo-icon {
   width: 26px;
@@ -42,6 +49,12 @@ body {
   font-size: 1.25rem;
   text-decoration: none;
   color: #3A5FCD;   /* primary blue */
+}
+
+@media (max-width: 600px) {
+  .lb-logo a {
+    font-size: 1.1rem;
+  }
 }
 
 /* Right-side nav (icons) */
@@ -107,6 +120,53 @@ body {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+  .lb-hero {
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .lb-hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .lb-hero p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lb-hero {
+    padding: 2rem 1rem 1.5rem;
+  }
+
+  .lb-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .lb-hero p {
+    font-size: 1rem;
+  }
+}
+
+.lb-hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .lb-hero-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .lb-hero-actions .btn {
+    width: 100%;
+  }
+}
+
 /* Buttons */
 
 .btn {
@@ -138,6 +198,22 @@ body {
 .btn-secondary:hover {
   color: #2647A4;
   border-color: #2647A4;
+}
+
+.btn-danger {
+  background-color: #d93025;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #b52920;
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 1rem;
+  }
 }
 
 /* ================================
@@ -201,6 +277,36 @@ body {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .auth-main {
+    padding: 2rem 1rem;
+  }
+
+  .auth-card {
+    padding: 2rem 1.75rem;
+  }
+
+  .auth-card h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-main {
+    padding: 1rem 0.5rem;
+  }
+
+  .auth-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 0.8rem;
+  }
+
+  .auth-card h1 {
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
 /* Form fields */
 
 .form-field {
@@ -225,6 +331,19 @@ body {
   outline: none;
   border-color: #3A5FCD;
   box-shadow: 0 0 0 2px rgba(58, 95, 205, 0.15);
+}
+
+@media (max-width: 480px) {
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    font-size: 16px; /* Prevents zoom on iOS when focusing */
+    padding: 0.65rem 0.75rem;
+  }
+
+  .form-field label {
+    font-size: 0.95rem;
+  }
 }
 
 /* Validation */
@@ -280,6 +399,17 @@ body {
   color: #2d2b55;
 }
 
+@media (max-width: 480px) {
+  .auth-demo {
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .auth-demo code {
+    font-size: 0.8rem;
+  }
+}
+
 .auth-credentials-hint {
   margin-top: 1.8rem;
   font-size: 0.82rem;
@@ -306,13 +436,25 @@ body {
     align-items: center;
     gap: 6px;          /* small space between items */
     font-size: 14px;   /* smaller text */
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 .auth-links a,
 .auth-links span {
     font-size: 14px;
     white-space: nowrap;  /* STOP text from breaking to the next line */
+}
+
+@media (max-width: 480px) {
+  .auth-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .auth-links a,
+  .auth-links span {
+    white-space: normal;
+  }
 }
 .checkbox-field label {
   display: flex;
@@ -393,6 +535,30 @@ body {
     box-shadow: 0 8px 32px rgba(0,0,0,0.06);
 }
 
+@media (max-width: 768px) {
+  .dash-main {
+    padding: 1rem;
+    align-items: flex-start;
+  }
+
+  .dash-card {
+    width: 100%;
+    padding: 1.5rem 1.25rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dash-main {
+    padding: 0.5rem;
+  }
+
+  .dash-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+}
+
 .dash-header {
   display: flex;
   justify-content: space-between;
@@ -411,11 +577,72 @@ body {
   font-size: .95rem;
 }
 
+@media (max-width: 768px) {
+  .dash-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .dash-heading {
+    font-size: 1.5rem;
+  }
+
+  .dash-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .dash-actions {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .dash-actions .btn {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dash-heading {
+    font-size: 1.3rem;
+  }
+
+  .dash-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .dash-actions .btn {
+    width: 100%;
+  }
+}
+
 .dash-controls {
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .dash-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .dash-controls label {
+    font-size: 0.9rem;
+  }
+
+  .dash-controls select {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
 }
 
 .dash-table-wrapper {
@@ -438,6 +665,28 @@ body {
 .accounts-table td {
   padding: .75rem .5rem;
   border-top: 1px solid #e3e6f2;
+}
+
+@media (max-width: 768px) {
+  .accounts-table {
+    font-size: 0.9rem;
+  }
+
+  .accounts-table th,
+  .accounts-table td {
+    padding: 0.6rem 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .accounts-table {
+    font-size: 0.85rem;
+  }
+
+  .accounts-table th,
+  .accounts-table td {
+    padding: 0.5rem 0.25rem;
+  }
 }
 
 /* Sorting cursor */
@@ -509,9 +758,20 @@ body {
   margin-bottom: 0.7rem;
   font-size: 1rem;
 }
+
 @media (max-width: 900px) {
   .profile-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 1rem;
+  }
+
+  .profile-card h2 {
+    font-size: 0.95rem;
   }
 }
 
@@ -548,6 +808,39 @@ body {
   font-size: 0.85rem;
   color: #6a648a;
   margin-bottom: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  .transfer-main {
+    padding: 2rem 1rem;
+  }
+
+  .transfer-card {
+    padding: 2rem 1.75rem;
+  }
+
+  .transfer-card h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .transfer-main {
+    padding: 1rem 0.5rem;
+  }
+
+  .transfer-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 0.8rem;
+  }
+
+  .transfer-card h1 {
+    font-size: 1.4rem;
+  }
+
+  .transfer-meta {
+    font-size: 0.8rem;
+  }
 }
 
 /* Reuse .form-field, .field-error, .btn, etc. */
