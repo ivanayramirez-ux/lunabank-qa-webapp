@@ -1,0 +1,572 @@
+/* ================================
+   Basic LunaBank styling starter
+   ================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #F3F6FF;   /* soft background */
+  color: #1f1230;
+}
+
+/* ================================
+   Header / Footer
+   ================================ */
+
+.lb-header,
+.lb-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #e3dff0;
+}
+
+/* Moon icon support */
+.lb-logo-icon {
+  width: 26px;
+  height: 26px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.lb-logo a {
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #3A5FCD;   /* primary blue */
+}
+
+/* Right-side nav (icons) */
+
+.lb-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* legacy link style (index still safe) */
+.lb-nav a {
+  margin-left: 0;
+  text-decoration: none;
+  color: #3A5FCD;
+}
+
+.lb-nav a:hover {
+  color: #2647A4;   /* accent blue */
+}
+
+/* Social icons */
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+  filter: invert(36%) sepia(47%) saturate(1100%)
+          hue-rotate(206deg) brightness(92%) contrast(95%);
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.social-link:hover .social-icon {
+  filter: invert(21%) sepia(79%) saturate(1500%)
+          hue-rotate(208deg) brightness(87%) contrast(93%);
+  opacity: 0.85;
+}
+
+/* ================================
+   HERO SECTION (index.html)
+   ================================ */
+
+.lb-hero {
+  padding: 6rem 2rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lb-hero h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.lb-hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #3A5FCD;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #2647A4;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #3A5FCD;
+  border: 1px solid #3A5FCD;
+}
+
+.btn-secondary:hover {
+  color: #2647A4;
+  border-color: #2647A4;
+}
+
+/* ================================
+   FEATURES / CARDS (index.html)
+   ================================ */
+
+.lb-features {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.lb-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.lb-feature-card {
+  background-color: #fff;
+  padding: 1.6rem 1.8rem;
+  border-radius: 1.1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .lb-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================
+   AUTH PAGES (login / register)
+   ================================ */
+
+.auth-main {
+  min-height: calc(100vh - 120px); /* header + footer approx */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.auth-card {
+  background-color: #fff;
+  max-width: 420px;
+  width: 100%;
+  padding: 2.5rem 2.75rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+
+.auth-card h1 {
+  font-size: 1.9rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Form fields */
+
+.form-field {
+  margin-bottom: 1rem;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+}
+
+.form-field input {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d5d9f5;
+  font-size: 0.95rem;
+}
+
+.form-field input:focus {
+  outline: none;
+  border-color: #3A5FCD;
+  box-shadow: 0 0 0 2px rgba(58, 95, 205, 0.15);
+}
+
+/* Validation */
+
+.input-error {
+  border-color: #d93025;
+}
+
+.field-error {
+  min-height: 1.1rem;
+  font-size: 0.8rem;
+  color: #d93025;
+  margin-top: 0.15rem;
+}
+
+/* Banners */
+
+.auth-banner {
+  min-height: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.auth-banner-error {
+  color: #d93025;
+}
+
+.auth-banner-success {
+  color: #137333;
+}
+
+/* Switch link under form */
+
+.auth-switch {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.auth-demo {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #4d3d73;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.auth-demo code {
+  background: #f2f3ff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #2d2b55;
+}
+
+.auth-credentials-hint {
+  margin-top: 1.8rem;
+  font-size: 0.82rem;
+  color: #4a4470;
+  line-height: 1.35;
+  text-align: left;
+  opacity: 0.85;
+}
+
+.auth-credentials-hint strong {
+  font-size: 0.85rem;
+  color: #2c2540;
+}
+
+.auth-credentials-hint code {
+  background: #eef1ff;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+}
+.auth-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;          /* small space between items */
+    font-size: 14px;   /* smaller text */
+    margin-top: 10px; 
+}
+
+.auth-links a,
+.auth-links span {
+    font-size: 14px;
+    white-space: nowrap;  /* STOP text from breaking to the next line */
+}
+.checkbox-field label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.checkbox-field input[type="checkbox"] {
+  margin-top: 0.15rem;
+}
+
+.auth-demo {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #4a3d66;
+}
+/* ---------- Shared auth tweaks (login + register) ---------- */
+
+.required {
+  color: #d93025;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* First / last name side by side */
+/* Make First + Last Name stack vertically */
+.form-row {
+  display: block;
+}
+
+.form-field.half {
+  width: 100%;
+}
+/* Checkbox line FIXED */
+.checkbox-field {
+  display: flex;
+  align-items: center;      /* put checkbox + text on SAME vertical line */
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.checkbox-field label {
+  display: flex;
+  align-items: center;      /* perfectly align text + checkbox */
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  flex-wrap: nowrap;        /* prevent text wrapping weirdly */
+}
+
+.checkbox-field input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;                /* remove top weird spacing */
+}
+
+/* ============================
+   DASHBOARD LAYOUT
+============================ */
+
+.dash-main {
+    min-height: 100vh;           /* full screen height */
+    display: flex;
+    justify-content: center;     /* center horizontally */
+    align-items: center;         /* center vertically */
+    padding: 2rem;
+    background: #F6F8FF;         /* matches your theme */
+}
+
+.dash-card {
+    width: 80%;
+    max-width: 1200px;
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.dash-heading {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.dash-subtitle {
+  margin-top: .25rem;
+  color: #4a4a63;
+  font-size: .95rem;
+}
+
+.dash-controls {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dash-table-wrapper {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.accounts-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.accounts-table th {
+  text-align: left;
+  padding: .75rem .5rem;
+  font-weight: 600;
+}
+
+.accounts-table td {
+  padding: .75rem .5rem;
+  border-top: 1px solid #e3e6f2;
+}
+
+/* Sorting cursor */
+.sortable {
+  cursor: pointer;
+}
+
+/* Zebra striping */
+.accounts-table tbody tr:nth-child(even) {
+  background: #f7f9ff;
+}
+
+
+/* Accounts table */
+
+.dash-table-wrapper {
+  overflow-x: auto;
+}
+
+.accounts-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.accounts-table th,
+.accounts-table td {
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7fb;
+}
+
+.accounts-table thead th {
+  font-weight: 600;
+  color: #3d3a64;
+  cursor: pointer;
+}
+
+.accounts-table tbody tr:hover {
+  background-color: #f7f8ff;
+}
+
+.accounts-table .negative {
+  color: #d93025;
+}
+
+/* Small viewport tweak */
+@media (max-width: 700px) {
+  .dash-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.profile-card {
+  border: 1px solid #e3e6ff;
+  border-radius: 0.9rem;
+  padding: 1.1rem 1.25rem;
+  background: #fafbff;
+}
+
+.profile-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+}
+@media (max-width: 900px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* ================================
+   TRANSFER PAGE
+   ================================ */
+
+.transfer-main {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.transfer-card {
+  background-color: #fff;
+  max-width: 520px;
+  width: 100%;
+  padding: 2.5rem 2.75rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+
+.transfer-card h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.transfer-meta {
+  font-size: 0.85rem;
+  color: #6a648a;
+  margin-bottom: 1.3rem;
+}
+
+/* Reuse .form-field, .field-error, .btn, etc. */
+
+.transfer-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.transfer-toggle input[type="checkbox"] {
+  margin: 0;
+}
+
+.transfer-id {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #2b6a3f;
+}
+

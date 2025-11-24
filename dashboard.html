@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LunaBank – Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="lb-header">
+  <div class="lb-logo">
+    <img src="https://img.icons8.com/fluency/48/moon-symbol.png" class="lb-logo-icon" alt="">
+    <a href="index.html">LunaBank</a>
+  </div>
+
+  <nav class="lb-nav">
+    <a class="social-link" href="https://github.com/ivanayramirez-ux" target="_blank">
+      <img src="https://img.icons8.com/ios-glyphs/26/github.png" class="social-icon">
+    </a>
+    <a class="social-link" href="https://www.linkedin.com/in/ivana-ramirez-392381211/" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/26/linkedin.png" class="social-icon">
+    </a>
+  </nav>
+</header>
+
+<main class="dash-main">
+  <section class="dash-card" aria-labelledby="dash-heading">
+
+    <header class="dash-header">
+      <div>
+        <h1 id="dash-heading" class="dash-heading">Welcome back, Moon</h1>
+        <p class="dash-subtitle">Here’s an overview of your LunaBank accounts.</p>
+      </div>
+
+      <div class="dash-actions">
+        <button class="btn btn-primary" onclick="window.location.href='transfer.html'">
+          Transfer funds
+        </button>
+        <button class="btn btn-danger" id="logout-btn">Log out</button>
+      </div>
+    </header>
+
+    <div class="dash-controls">
+      <label for="account-type-filter">Filter by type</label>
+      <select id="account-type-filter">
+        <option value="all">All</option>
+        <option value="Checking">Checking</option>
+        <option value="Savings">Savings</option>
+        <option value="Credit Card">Credit</option>
+      </select>
+    </div>
+
+    <div class="dash-table-wrapper" aria-live="polite">
+      <table class="accounts-table">
+        <thead>
+          <tr>
+            <th>Account Name</th>
+            <th>Type</th>
+            <th>Balance</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="accounts-tbody"></tbody>
+      </table>
+    </div>
+
+  </section>
+</main>
+
+>
+<script src="accounts-store.js"></script>
+
+
+<script src="dashboard.js"></script>
+
+
+<script>
+  document.getElementById("logout-btn").addEventListener("click", () => {
+    if (window.LunaAccounts && LunaAccounts.reset) {
+      LunaAccounts.reset();      
+    } else {
+      localStorage.removeItem("lunabank-accounts");
+    }
+    window.location.href = "login.html";
+  });
+</script>
+
+</body>
+</html>

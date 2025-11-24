@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LunaBank – Sign in</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="lb-header">
+  <div class="lb-logo">
+    <img src="https://img.icons8.com/fluency/48/moon-symbol.png" alt="" class="lb-logo-icon">
+    <a href="index.html">LunaBank</a>
+  </div>
+
+  <nav class="lb-nav" aria-label="Main navigation">
+    <a class="social-link" href="https://github.com/ivanayramirez-ux" target="_blank" aria-label="GitHub profile">
+      <img src="https://img.icons8.com/ios-glyphs/26/github.png" alt="GitHub" class="social-icon">
+    </a>
+    <a class="social-link" href="https://www.linkedin.com/in/ivana-ramirez-392381211/" target="_blank" aria-label="LinkedIn profile">
+      <img src="https://img.icons8.com/ios-filled/26/linkedin.png" alt="LinkedIn" class="social-icon">
+    </a>
+  </nav>
+</header>
+
+<main class="auth-main">
+  <section class="auth-card" aria-labelledby="login-heading">
+
+    <h1 id="login-heading">Sign in to LunaBank</h1>
+
+    
+    <div id="login-banner" class="auth-banner" aria-live="polite"></div>
+
+    
+    <form id="login-form" novalidate>
+
+      <div class="form-field">
+        <label for="login-email">Email address</label>
+        <input id="login-email" name="email" type="email" autocomplete="username">
+        <p class="field-error" id="login-email-error"></p>
+      </div>
+
+      <div class="form-field">
+        <label for="login-password">Password</label>
+        <input id="login-password" name="password" type="password" autocomplete="current-password">
+        <p class="field-error" id="login-password-error"></p>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+
+    
+    <div class="auth-links">
+      <a href="forgot-password.html" class="forgot-link">Forgot password?</a>
+      <span class="auth-text">Don’t have an account?</span>
+      <a href="register.html" class="open-link">Open an account</a>
+    </div>
+
+    
+    <p class="auth-demo">
+      <strong>Demo credentials (for testing only):</strong><br>
+      • Email: <code>test@lunabank.com</code><br>
+      • Password: <code>EasyPass123</code><br><br>
+
+      <strong>Locked account:</strong><br>
+      • Email: <code>locked@lunabank.com</code><br>
+      • Password: <code>any password</code>
+    </p>
+
+  </section>
+</main>
+
+<script src="login.js"></script>
+
+</body>
+</html>

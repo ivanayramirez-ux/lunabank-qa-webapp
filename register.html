@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LunaBank – Create Account</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="lb-header">
+  <div class="lb-logo">
+    <img src="https://img.icons8.com/fluency/48/moon-symbol.png" class="lb-logo-icon" alt="">
+    <a href="index.html">LunaBank</a>
+  </div>
+  <nav class="lb-nav">
+    <a class="social-link" href="https://github.com/ivanayramirez-ux" target="_blank">
+      <img src="https://img.icons8.com/ios-glyphs/26/github.png" class="social-icon">
+    </a>
+    <a class="social-link" href="https://www.linkedin.com/in/ivana-ramirez-392381211/" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/26/linkedin.png" class="social-icon">
+    </a>
+  </nav>
+</header>
+
+<main class="auth-main">
+  <section class="auth-card" aria-labelledby="register-heading">
+
+    
+    <div id="register-banner" class="auth-banner" aria-live="polite"></div>
+
+    <h1 id="register-heading">Create your LunaBank account</h1>
+
+    <form id="register-form" novalidate>
+
+  <div class="form-field">
+    <label for="first-name">First Name <span class="required">*</span></label>
+    <input id="first-name" type="text">
+    <p class="field-error" id="first-error"></p>
+  </div>
+
+  <div class="form-field">
+    <label for="last-name">Last Name <span class="required">*</span></label>
+    <input id="last-name" type="text">
+    <p class="field-error" id="last-error"></p>
+  </div>
+
+  <div class="form-field">
+    <label for="email">Email <span class="required">*</span></label>
+    <input id="email" type="email">
+    <p class="field-error" id="email-error"></p>
+  </div>
+
+  <div class="form-field">
+    <label for="confirm-email">Confirm Email <span class="required">*</span></label>
+    <input id="confirm-email" type="email">
+    <p class="field-error" id="confirm-email-error"></p>
+  </div>
+
+  <div class="form-field">
+    <label for="password">Password <span class="required">*</span></label>
+    <input id="password" type="password">
+    <p class="field-error" id="password-error"></p>
+  </div>
+
+  <div class="form-field">
+    <label for="confirm-password">Confirm Password <span class="required">*</span></label>
+    <input id="confirm-password" type="password">
+    <p class="field-error" id="confirm-password-error"></p>
+  </div>
+
+  <div class="form-field checkbox-field">
+    <label>
+      <input id="terms-checkbox" type="checkbox">
+      <span>I accept the Terms &amp; Conditions <span class="required">*</span></span>
+    </label>
+    <p class="field-error" id="terms-error"></p>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Create account</button>
+</form>
+
+    <p class="auth-switch small-link">
+      Already have an account?
+      <a href="login.html">Sign in</a>
+    </p>
+
+  </section>
+</main>
+
+<footer class="lb-footer">
+  <p>&copy; <span id="year"></span> LunaBank</p>
+</footer>
+
+<script src="register.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
