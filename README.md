@@ -3,6 +3,8 @@
 LunaBank is a small front-end banking app built specifically for QA automation practice.  
 It simulates a simple online banking experience with login, registration, account dashboard, and transfer flows that can be tested end-to-end using tools like Selenium, Playwright, Cypress, or any other UI automation stack.
 
+Ongoing Project
+
 https://lunabank-qa.netlify.app/
 
 ---
