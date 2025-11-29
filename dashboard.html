@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>LunaBank – Dashboard</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/moon-symbol.png">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="lb-header">
+    <div class="lb-logo">
+      <img src="https://img.icons8.com/fluency/48/moon-symbol.png" class="lb-logo-icon" alt="Moon logo">
+      <a href="index.html">LunaBank</a>
+    </div>
+
+    <nav class="lb-nav" aria-label="Main navigation">
+      <a class="social-link" href="https://github.com/ivanayramirez-ux" target="_blank" aria-label="GitHub">
+        <img src="https://img.icons8.com/ios-glyphs/26/github.png" class="social-icon" alt="GitHub icon">
+      </a>
+      <a class="social-link" href="https://www.linkedin.com/in/ivana-ramirez-392381211/" target="_blank"
+        aria-label="LinkedIn">
+        <img src="https://img.icons8.com/ios-filled/26/linkedin.png" class="social-icon" alt="LinkedIn icon">
+      </a>
+    </nav>
+  </header>
+
+  <main class="dash-main">
+    <section class="dash-card" aria-labelledby="dash-heading">
+
+      <header class="dash-header">
+        <div>
+          <h1 id="dash-heading" class="dash-heading">
+            Welcome back, <span class="dash-username">Moon</span>
+          </h1>
+          <p class="dash-subtitle">Here’s an overview of your LunaBank accounts.</p>
+        </div>
+
+        <div class="dash-actions">
+          <button class="btn btn-primary" id="transfer-btn">
+            Transfer funds
+          </button>
+          <button class="btn btn-secondary" id="logout-btn">
+            Log out
+          </button>
+        </div>
+      </header>
+
+      <div class="dash-top-row">
+        
+        <div class="dash-summary-grid" aria-label="Account summary">
+          <article class="summary-card">
+            <h2 class="summary-title">Total balance</h2>
+            <p class="summary-amount" id="summary-total">$18,829.89</p>
+            <p class="summary-caption">Across 3 active accounts</p>
+          </article>
+
+          
+          <article class="summary-card" data-summary="upcoming-bills">
+            <h2 class="summary-title">Upcoming bills</h2>
+            <p class="summary-amount">$420.00</p>
+            <p class="summary-caption">Due in the next 7 days</p>
+          </article>
+
+          
+          <article class="summary-card summary-card-positive" data-summary="savings-month">
+            <h2 class="summary-title">Savings this month</h2>
+            <p class="summary-amount">+$250.00</p>
+            <p class="summary-caption">Automatic transfers enabled</p>
+          </article>
+        </div>
+
+        
+        <nav class="dash-quick-links" aria-label="Quick links">
+          <h2 class="dash-quick-heading">Quick links</h2>
+          <a href="profile.html"
+             class="dash-quick-link"
+             data-quick-link="profile">
+            View profile
+          </a>
+          <a href="statements.html"
+             class="dash-quick-link"
+             data-quick-link="statements">
+            Statements &amp; documents
+          </a>
+          <a href="security.html"
+             class="dash-quick-link"
+             data-quick-link="security">
+            Security &amp; settings
+          </a>
+        </nav>
+      </div>
+
+      
+      <section class="dash-accounts" aria-label="Accounts overview">
+        <div class="dash-controls">
+          <label for="account-type-filter">Filter by type</label>
+          <select id="account-type-filter">
+            <option value="all">All</option>
+            <option value="Checking">Checking</option>
+            <option value="Savings">Savings</option>
+            <option value="Credit Card">Credit</option>
+          </select>
+        </div>
+
+        <div class="dash-table-wrapper" aria-live="polite">
+          <table class="accounts-table">
+            <thead>
+              <tr>
+                <th>Account Name</th>
+                <th>Type</th>
+                <th>Balance</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="accounts-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      
+      <section class="dash-invest" aria-label="Linked investment accounts">
+        <header class="dash-invest-header">
+          <h2>Investment &amp; trading</h2>
+          <p class="dash-invest-subtitle">
+            View your interstellar portfolio through our partner Rocky Asset Management.
+          </p>
+        </header>
+
+        <article class="invest-card" id="rocky-card" role="button" tabindex="0" aria-describedby="rocky-desc">
+          <div class="invest-main">
+            <p class="invest-title">RockyInvest</p>
+            <p class="invest-tagline" id="rocky-desc">
+              “Tau Ceti Growth Portfolio” · Linked investment account
+            </p>
+            <p class="invest-disclosure">
+              Investments are held away from LunaBank. Values may fluctuate with market and stellar conditions.
+            </p>
+          </div>
+
+          <div class="invest-side">
+            <p class="invest-value">$52,410.32</p>
+            <p class="invest-change positive">+3.4% this year</p>
+            
+            <button class="btn btn-tertiary"
+                    type="button"
+                    data-test="rocky-terminal">
+              Open Rocky terminal
+            </button>
+          </div>
+        </article>
+      </section>
+
+      
+      <section class="dash-recent" aria-label="Recent activity">
+        <header class="dash-recent-header">
+          <h2>Recent activity</h2>
+          <a href="transactions.html" class="dash-link-inline">View all</a>
+        </header>
+
+        <ul class="dash-recent-list">
+          <li class="recent-item">
+            <div>
+              <p class="recent-title">Coffee shop</p>
+              <p class="recent-meta">Everyday Checking · Today</p>
+            </div>
+            <p class="recent-amount negative">-$4.75</p>
+          </li>
+          <li class="recent-item">
+            <div>
+              <p class="recent-title">Paycheck</p>
+              <p class="recent-meta">Everyday Checking · Yesterday</p>
+            </div>
+            <p class="recent-amount positive">+$1,850.00</p>
+          </li>
+          <li class="recent-item">
+            <div>
+              <p class="recent-title">Transfer to High-Yield Savings</p>
+              <p class="recent-meta">Scheduled transfer</p>
+            </div>
+            <p class="recent-amount neutral">-$250.00</p>
+          </li>
+        </ul>
+      </section>
+
+    </section>
+  </main>
+
+  
+  <div class="rocky-modal-backdrop" id="rocky-modal" aria-hidden="true">
+    <div class="rocky-modal" role="dialog" aria-modal="true" aria-labelledby="rocky-modal-title"
+      aria-describedby="rocky-modal-body">
+      <h2 id="rocky-modal-title">You’re leaving LunaBank</h2>
+      <p id="rocky-modal-body">
+        You’re about to open <strong>RockyInvest</strong>, an external
+        investment experience inspired by the Tau Ceti mission.
+      </p>
+
+      <ul class="rocky-bullets rocky-no-bullets">
+        <li>Balances and holdings may not match your LunaBank accounts.</li>
+        <li>Market data is for testing and automation scenarios only.</li>
+        <li>Destination: approx. <strong>12.6 light-years</strong> from Sol.</li>
+      </ul>
+
+      <div class="rocky-modal-actions">
+        <button type="button" class="btn btn-secondary" id="rocky-cancel-btn">
+          Stay on LunaBank
+        </button>
+
+        <a href="rocky-down.html" class="btn btn-primary" target="_blank" rel="noopener">
+          Continue to RockyInvest
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="accounts-store.js"></script>
+  <script src="dashboard.js"></script>
+
+  <footer class="lb-footer-disclaimer">
+    <div class="lb-disclaimer-section">
+      <h3>Important Notice</h3>
+
+      <div class="lb-disclaimer-grid">
+        <div class="lb-disc-item">Not a Real Bank</div>
+        <div class="lb-disc-item">No Real Accounts</div>
+        <div class="lb-disc-item">For Demo Use Only</div>
+      </div>
+
+      <p><strong>LunaBank is a fictional application created for QA automation and software testing portfolio
+          demonstrations.</strong></p>
+      <p>No actual banking, investment products, credit services, or financial accounts are provided here.</p>
+      <p>All content, labels, UI flows, and names exist solely for testing skills in UI automation, API testing,
+        accessibility testing, and performance testing.</p>
+      <p>Do not submit real personal or financial information.</p>
+
+      <p class="lb-disclaimer-id">Demo Build · 2025</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

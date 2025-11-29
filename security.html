@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LunaBank – Security &amp; settings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/moon-symbol.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="lb-header">
+        <div class="lb-logo">
+            <img src="https://img.icons8.com/fluency/48/moon-symbol.png" class="lb-logo-icon" alt="Moon logo">
+            <a href="index.html">LunaBank</a>
+        </div>
+
+        <div class="lb-header-right">
+            <a class="social-link" href="https://github.com/ivanayramirez-ux" target="_blank" aria-label="GitHub">
+                <img src="https://img.icons8.com/ios-glyphs/26/github.png" class="social-icon" alt="GitHub icon">
+            </a>
+            <a class="social-link" href="https://www.linkedin.com/in/ivana-ramirez-392381211/" target="_blank"
+                aria-label="LinkedIn">
+                <img src="https://img.icons8.com/ios-filled/26/linkedin.png" class="social-icon" alt="LinkedIn icon">
+            </a>
+        </div>
+    </header>
+
+    <main class="security-main" id="main-content">
+        <section class="security-card">
+            <a href="dashboard.html" class="tx-back">← Back to dashboard</a>
+
+            <header class="security-header">
+                <div>
+                    <h1>Security &amp; sign-in</h1>
+                    <p class="security-subtitle">
+                        Manage how you sign in to LunaBank and how we alert you about account activity.
+                    </p>
+                </div>
+            </header>
+
+           
+            <section class="profile-section"
+                     aria-labelledby="sec-signin-heading"
+                     data-section="sign-in">
+                <div class="profile-section-header">
+                    <h2 id="sec-signin-heading">Sign-in protection</h2>
+                </div>
+
+                <div class="profile-toggle-list">
+                    <label class="toggle-row" data-sec-item="mfa">
+                        <span>Multi-factor authentication</span>
+                        
+                        <input type="checkbox" data-sec-toggle="mfa">
+                        <span class="toggle-slider" aria-hidden="true"></span>
+                    </label>
+
+                    <label class="toggle-row" data-sec-item="biometrics">
+                        <span>Biometric login on mobile</span>
+                        
+                        <input type="checkbox" data-sec-toggle="biometrics">
+                        <span class="toggle-slider" aria-hidden="true"></span>
+                    </label>
+                </div>
+            </section>
+
+            
+            <section class="profile-section"
+                     aria-labelledby="sec-alerts-heading"
+                     data-section="alerts">
+                <div class="profile-section-header">
+                    <h2 id="sec-alerts-heading">Login alerts</h2>
+                </div>
+
+                <div class="sec-radio-group" data-sec-group="alerts">
+                    <label data-alert-option="email_sms">
+                        <input type="radio" name="sec-alerts" value="email_sms">
+                        Email &amp; SMS
+                    </label>
+                    <label data-alert-option="email">
+                        <input type="radio" name="sec-alerts" value="email">
+                        Email only
+                    </label>
+                    <label data-alert-option="sms">
+                        <input type="radio" name="sec-alerts" value="sms">
+                        SMS only
+                    </label>
+                    <label data-alert-option="none">
+                        <input type="radio" name="sec-alerts" value="none">
+                        Off
+                    </label>
+                </div>
+            </section>
+
+            
+            <section class="profile-section"
+                     aria-labelledby="sec-devices-heading"
+                     data-section="devices">
+                <div class="profile-section-header">
+                    <h2 id="sec-devices-heading">Trusted devices</h2>
+                </div>
+
+                <p class="sec-devices-text">
+                    You’re currently signed in on
+                    
+                    <span data-sec="trusted-count">3</span> trusted devices.
+                </p>
+
+                <p class="sec-small">
+                    Device trust is simulated for this demo. Changing security settings will
+                    update the count shown here and on your profile.
+                </p>
+            </section>
+
+            
+            <div class="security-actions">
+                <button class="btn btn-secondary" type="button" id="sec-cancel">
+                    Cancel
+                </button>
+                <button class="btn btn-primary" type="button" id="sec-save" disabled>
+                    Save changes
+                </button>
+            </div>
+
+            <p class="security-message" id="sec-message" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <script src="security.js"></script>
+
+    <footer class="lb-footer-disclaimer">
+        <div class="lb-disclaimer-section">
+            <h3>Important Notice</h3>
+            <div class="lb-disclaimer-grid">
+                <div class="lb-disc-item">Not a Real Bank</div>
+                <div class="lb-disc-item">No Real Accounts</div>
+                <div class="lb-disc-item">For Demo Use Only</div>
+            </div>
+            <p><strong>LunaBank is a fictional application created for QA automation and software testing portfolio
+                    demonstrations.</strong></p>
+            <p>No actual banking, investment products, credit services, or financial accounts are provided here.</p>
+            <p>All content, labels, UI flows, and names exist solely for testing skills in UI automation, API testing,
+                accessibility testing, and performance testing.</p>
+            <p>Do not submit real personal or financial information.</p>
+            <p class="lb-disclaimer-id">Demo Build · 2025</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

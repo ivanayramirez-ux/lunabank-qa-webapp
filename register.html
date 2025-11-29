@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LunaBank – Create Accoun</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/moon-symbol.png">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="lb-header">
+  <div class="lb-logo">
+    <img src="https://img.icons8.com/fluency/48/moon-symbol.png" class="lb-logo-icon" alt="">
+    <a href="index.html">LunaBank</a>
+  </div>
+  <nav class="lb-nav">
+    <a class="social-link" href="https://github.com/ivanayramirez-ux" target="_blank">
+      <img src="https://img.icons8.com/ios-glyphs/26/github.png" class="social-icon">
+    </a>
+    <a class="social-link" href="https://www.linkedin.com/in/ivana-ramirez-392381211/" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/26/linkedin.png" class="social-icon">
+    </a>
+  </nav>
+</header>
+
+<main class="auth-main">
+  <section class="auth-card" aria-labelledby="register-heading">
+
+    
+    <div id="register-banner" class="auth-banner" aria-live="polite"></div>
+
+    <h1 id="register-heading">Create your LunaBank account</h1>
+
+    <form id="register-form" novalidate>
+
+  <div class="form-field">
+    <label for="first-name">First Name <span class="required">*</span></label>
+    <input id="first-name" type="text">
+    <p class="field-error" id="first-error"></p>
+  </div>
+
+  <div class="form-field">
+    <label for="last-name">Last Name <span class="required">*</span></label>
+    <input id="last-name" type="text">
+    <p class="field-error" id="last-error"></p>
+  </div>
+
+  <div class="form-field">
+    <label for="email">Email <span class="required">*</span></label>
+    <input id="email" type="email">
+    <p class="field-error" id="email-error"></p>
+  </div>
+
+  <div class="form-field">
+    <label for="confirm-email">Confirm Email <span class="required">*</span></label>
+    <input id="confirm-email" type="email">
+    <p class="field-error" id="confirm-email-error"></p>
+  </div>
+
+  <div class="form-field">
+    <label for="password">Password <span class="required">*</span></label>
+    <input id="password" type="password">
+    <p class="field-error" id="password-error"></p>
+  </div>
+
+  <div class="form-field">
+    <label for="confirm-password">Confirm Password <span class="required">*</span></label>
+    <input id="confirm-password" type="password">
+    <p class="field-error" id="confirm-password-error"></p>
+  </div>
+
+  <div class="form-field checkbox-field">
+    <label>
+      <input id="terms-checkbox" type="checkbox">
+      <span>I accept the Terms &amp; Conditions <span class="required">*</span></span>
+    </label>
+    <p class="field-error" id="terms-error"></p>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Create account</button>
+</form>
+
+    <p class="auth-switch small-link">
+      Already have an account?
+      <a href="login.html">Sign in</a>
+    </p>
+
+  </section>
+</main>
+
+<script src="register.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<footer class="lb-footer-disclaimer">
+  <div class="lb-disclaimer-section">
+    <h3>Important Notice</h3>
+
+    <div class="lb-disclaimer-grid">
+      <div class="lb-disc-item">Not a Real Bank</div>
+      <div class="lb-disc-item">No Real Accounts</div>
+      <div class="lb-disc-item">For Demo Use Only</div>
+    </div>
+
+    <p><strong>LunaBank is a fictional application created for QA automation and software testing portfolio demonstrations.</strong></p>
+    <p>No actual banking, investment products, credit services, or financial accounts are provided here.</p>
+    <p>All content, labels, UI flows, and names exist solely for testing skills in UI automation, API testing, accessibility testing, and performance testing.</p>
+    <p>Do not submit real personal or financial information.</p>
+
+    <p class="lb-disclaimer-id">Demo Build · 2025</p>
+  </div>
+</footer>
+
+
+</body>
+</html>

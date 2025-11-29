@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>LunaBank - Statements & documents</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/moon-symbol.png">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="lb-header">
+    <div class="lb-logo">
+      <img src="https://img.icons8.com/fluency/48/moon-symbol.png" class="lb-logo-icon" alt="Moon logo">
+      <a href="index.html">LunaBank</a>
+    </div>
+
+    <nav class="lb-nav" aria-label="Main navigation">
+      <a class="social-link" href="https://github.com/ivanayramirez-ux" target="_blank" aria-label="GitHub">
+        <img src="https://img.icons8.com/ios-glyphs/26/github.png" class="social-icon" alt="GitHub icon">
+      </a>
+      <a class="social-link" href="https://www.linkedin.com/in/ivana-ramirez-392381211/" target="_blank"
+        aria-label="LinkedIn">
+        <img src="https://img.icons8.com/ios-filled/26/linkedin.png" class="social-icon" alt="LinkedIn icon">
+      </a>
+    </nav>
+  </header>
+
+  <main class="dash-main">
+    <section class="dash-card" aria-labelledby="statements-heading">
+
+
+      <header class="dash-header">
+        <div>
+          <h1 id="statements-heading" class="dash-heading">
+            Statements and documents
+          </h1>
+          <p class="dash-subtitle">
+            View, download, and manage your LunaBank statements and yearly documents.
+          </p>
+        </div>
+      </header>
+      <p class="statements-back-wrap">
+        <a href="dashboard.html" class="dash-link-inline statements-back-link">
+          ← Back to dashboard
+        </a>
+      </p>
+
+
+      <section class="dash-accounts" aria-label="Filter statements">
+        <div class="dash-controls">
+          <div>
+            <label for="stmt-account-filter">Account</label><br>
+            <select id="stmt-account-filter" name="stmt-account-filter">
+              <option value="all">All accounts</option>
+              <option value="checking">Everyday Checking •••• 1420</option>
+              <option value="savings">High-Yield Savings •••• 8842</option>
+              <option value="credit">Rocky Travel Credit •••• 9321</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="stmt-year-filter">Year</label><br>
+            <select id="stmt-year-filter" name="stmt-year-filter">
+              <option value="all">All years</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="stmt-format-filter">Document type</label><br>
+            <select id="stmt-format-filter" name="stmt-format-filter">
+              <option value="all">All types</option>
+              <option value="monthly">Monthly statements</option>
+              <option value="tax">Tax documents</option>
+              <option value="notices">Notices and letters</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+
+      <section aria-label="Monthly statements" class="dash-accounts">
+        <h2 class="dash-quick-heading" style="margin-bottom: 0.5rem;">
+          Monthly statements
+        </h2>
+        <p class="dash-subtitle" style="margin-bottom: 0.75rem;">
+          Recent statements are available for download as PDF files. Older
+          documents may be archived.
+        </p>
+
+        <div class="dash-table-wrapper" aria-live="polite">
+          <table class="accounts-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Account</th>
+                <th>Statement period</th>
+                <th>Format</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr class="stmt-row" data-account="checking" data-year="2025" data-doc-type="monthly">
+                <td>Oct 31, 2025</td>
+                <td>Everyday Checking •••• 1420</td>
+                <td>Oct 1 - Oct 31, 2025</td>
+                <td>PDF</td>
+                <td>
+
+                  <a href="lunabank-statement-oct2025.pdf" class="dash-link-inline" target="_blank" rel="noopener">
+                    View
+                  </a>
+                </td>
+
+                </td>
+              </tr>
+              <tr class="stmt-row" data-account="checking" data-year="2025" data-doc-type="monthly">
+                <td>Sep 30, 2025</td>
+                <td>Everyday Checking •••• 1420</td>
+                <td>Sep 1 - Sep 30, 2025</td>
+                <td>PDF</td>
+                <td>
+                  <a href="#" class="dash-link-inline stmt-view-link">View</a>
+                </td>
+              </tr>
+              <tr class="stmt-row" data-account="savings" data-year="2025" data-doc-type="monthly">
+                <td>Sep 30, 2025</td>
+                <td>High-Yield Savings •••• 8842</td>
+                <td>Sep 1 - Sep 30, 2025</td>
+                <td>PDF</td>
+                <td>
+                  <a href="#" class="dash-link-inline stmt-view-link">View</a>
+                </td>
+              </tr>
+              <tr class="stmt-row" data-account="credit" data-year="2025" data-doc-type="monthly">
+                <td>Aug 31, 2025</td>
+                <td>Rocky Travel Credit •••• 9321</td>
+                <td>Aug 1 - Aug 31, 2025</td>
+                <td>PDF</td>
+                <td>
+                  <a href="#" class="dash-link-inline stmt-view-link">View</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+      <section aria-label="Tax documents and notices" class="dash-accounts">
+        <h2 class="dash-quick-heading" style="margin-top: 2rem; margin-bottom: 0.5rem;">
+          Tax documents and yearly summaries
+        </h2>
+        <p class="dash-subtitle" style="margin-bottom: 0.75rem;">
+          These documents are provided for testing only and do not represent
+          real tax or regulatory forms.
+        </p>
+
+        <div class="dash-table-wrapper">
+          <table class="accounts-table">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Document</th>
+                <th>Account</th>
+                <th>Format</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stmt-row" data-account="savings" data-year="2025" data-doc-type="tax">
+                <td>2025</td>
+                <td>Interest summary - savings</td>
+                <td>High-Yield Savings •••• 8842</td>
+                <td>PDF</td>
+                <td>
+                  <a href="#" class="dash-link-inline stmt-view-link">View</a>
+                </td>
+              </tr>
+              <tr class="stmt-row" data-account="credit" data-year="2025" data-doc-type="tax">
+                <td>2025</td>
+                <td>Year end summary - credit</td>
+                <td>Rocky Travel Credit •••• 9321</td>
+                <td>PDF</td>
+                <td>
+                  <a href="#" class="dash-link-inline stmt-view-link">View</a>
+                </td>
+              </tr>
+              <tr class="stmt-row" data-account="all" data-year="2024" data-doc-type="notices">
+                <td>2024</td>
+                <td>Combined account summary</td>
+                <td>All LunaBank accounts</td>
+                <td>PDF</td>
+                <td>
+                  <a href="#" class="dash-link-inline stmt-view-link">View</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+      <section class="dash-accounts" aria-label="Delivery preferences">
+        <h2 class="dash-quick-heading" style="margin-top: 2rem; margin-bottom: 0.5rem;">
+          Delivery preferences
+        </h2>
+        <p class="dash-subtitle" style="margin-bottom: 0.75rem;">
+          Update how you would like to receive your statements. This section is
+          for automation practice only.
+        </p>
+
+        <form class="auth-demo" style="text-align: left; max-width: 520px;">
+          <div class="checkbox-field">
+            <input type="checkbox" id="paperless-all" name="paperless-all">
+            <label for="paperless-all">
+              Enroll all eligible accounts in paperless statements
+            </label>
+          </div>
+
+          <div class="form-field">
+            <label for="delivery-email">Primary email for statement alerts</label>
+            <input type="email" id="delivery-email" name="delivery-email" placeholder="moon@example.com">
+          </div>
+
+          <button type="button" class="btn btn-primary">
+            Save preferences
+          </button>
+        </form>
+      </section>
+
+    </section>
+  </main>
+
+  <script src="statements.js"></script>
+
+  <footer class="lb-footer-disclaimer">
+    <div class="lb-disclaimer-section">
+      <h3>Important Notice</h3>
+
+      <div class="lb-disclaimer-grid">
+        <div class="lb-disc-item">Not a Real Bank</div>
+        <div class="lb-disc-item">No Real Accounts</div>
+        <div class="lb-disc-item">For Demo Use Only</div>
+      </div>
+
+      <p><strong>LunaBank is a fictional application created for QA automation and software testing portfolio
+          demonstrations.</strong></p>
+      <p>No actual banking, investment products, credit services, or financial accounts are provided here.</p>
+      <p>All content, labels, UI flows, and names exist solely for testing skills in UI automation, API testing,
+        accessibility testing, and performance testing.</p>
+      <p>Do not submit real personal or financial information.</p>
+
+      <p class="lb-disclaimer-id">Demo Build · 2025</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

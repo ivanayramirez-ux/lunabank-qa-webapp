@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LunaBank – Transfer Funds</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/moon-symbol.png">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="lb-header">
+  <div class="lb-logo">
+    <img src="https://img.icons8.com/fluency/48/moon-symbol.png" class="lb-logo-icon" alt="">
+    <a href="index.html">LunaBank</a>
+  </div>
+
+  <nav class="lb-nav">
+    <a class="social-link" href="https://github.com/ivanayramirez-ux" target="_blank">
+      <img src="https://img.icons8.com/ios-glyphs/26/github.png" class="social-icon" alt="">
+    </a>
+    <a class="social-link" href="https://www.linkedin.com/in/ivana-ramirez-392381211/" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/26/linkedin.png" class="social-icon" alt="">
+    </a>
+  </nav>
+</header>
+
+<main class="auth-main">
+  <section class="auth-card" aria-labelledby="transfer-heading">
+
+    
+    <div id="transfer-banner" class="auth-banner" aria-live="polite"></div>
+
+    <h1 id="transfer-heading">Transfer funds</h1>
+
+    <form id="transfer-form" novalidate>
+
+      
+      <div class="form-field">
+        <label for="from-account">
+          From account <span class="required">*</span>
+        </label>
+        <select id="from-account">
+          <option value="">Select account</option>
+          
+          <option value="checking">Everyday Checking</option>
+          <option value="savings">High-Yield Savings</option>
+          <option value="credit">Travel Card</option>
+        </select>
+        <p class="field-error" id="from-error"></p>
+      </div>
+
+      
+      <div class="form-field">
+        <label for="to-account">
+          To account <span class="required">*</span>
+        </label>
+        <select id="to-account">
+          <option value="">Select account</option>
+          <option value="checking">Everyday Checking</option>
+          <option value="savings">High-Yield Savings</option>
+          <option value="credit">Travel Card</option>
+        </select>
+        <p class="field-error" id="to-error"></p>
+      </div>
+
+      
+      <div class="form-field">
+        <label for="amount">
+          Amount (USD) <span class="required">*</span>
+        </label>
+        <input id="amount" type="number" step="0.01" min="0">
+        <p class="field-error" id="amount-error"></p>
+      </div>
+
+      
+      <div class="form-field">
+        <label for="description">Description (optional)</label>
+        <textarea id="description" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit transfer</button>
+    </form>
+
+    <p class="auth-switch small-link">
+      Back to your accounts?
+      <a href="dashboard.html">Return to dashboard</a>
+    </p>
+
+  </section>
+</main>
+
+
+<script src="accounts-store.js"></script>
+<script src="transfer.js"></script>
+
+<footer class="lb-footer-disclaimer">
+  <div class="lb-disclaimer-section">
+    <h3>Important Notice</h3>
+
+    <div class="lb-disclaimer-grid">
+      <div class="lb-disc-item">Not a Real Bank</div>
+      <div class="lb-disc-item">No Real Accounts</div>
+      <div class="lb-disc-item">For Demo Use Only</div>
+    </div>
+
+    <p><strong>LunaBank is a fictional application created for QA automation and software testing portfolio demonstrations.</strong></p>
+    <p>No actual banking, investment products, credit services, or financial accounts are provided here.</p>
+    <p>All content, labels, UI flows, and names exist solely for testing skills in UI automation, API testing, accessibility testing, and performance testing.</p>
+    <p>Do not submit real personal or financial information.</p>
+
+    <p class="lb-disclaimer-id">Demo Build · 2025</p>
+  </div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>LunaBank – All transactions</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/moon-symbol.png">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="lb-header">
+    <div class="lb-logo">
+      <img src="https://img.icons8.com/fluency/48/moon-symbol.png" class="lb-logo-icon" alt="Moon logo">
+      <a href="index.html">LunaBank</a>
+    </div>
+
+    <nav class="lb-nav" aria-label="Main navigation">
+      <a class="social-link" href="https://github.com/ivanayramirez-ux" target="_blank" aria-label="GitHub">
+        <img src="https://img.icons8.com/ios-glyphs/26/github.png" class="social-icon" alt="GitHub icon">
+      </a>
+      <a class="social-link" href="https://www.linkedin.com/in/ivana-ramirez-392381211/" target="_blank"
+        aria-label="LinkedIn">
+        <img src="https://img.icons8.com/ios-filled/26/linkedin.png" class="social-icon" alt="LinkedIn icon">
+      </a>
+    </nav>
+  </header>
+
+  <main class="dash-main">
+    <section class="dash-card tx-card" aria-labelledby="tx-heading">
+
+
+      <header class="tx-header-row">
+        <div>
+          <h1 id="tx-heading" class="tx-heading">All transactions</h1>
+          <p class="tx-subtitle">
+            Detailed activity across your LunaBank accounts.
+          </p>
+        </div>
+
+        <a href="dashboard.html" class="tx-back">
+          ← Back to dashboard
+        </a>
+      </header>
+
+
+      <div class="tx-filters">
+        <label>
+          Account
+          <select id="tx-account-filter">
+            <option value="all">All accounts</option>
+            <option value="Everyday Checking">Everyday Checking</option>
+            <option value="High-Yield Savings">High-Yield Savings</option>
+            <option value="Travel Card">Travel Card</option>
+          </select>
+        </label>
+
+        <label>
+          Range
+          <select id="tx-range-filter" disabled>
+            <option>Last 30 days</option>
+          </select>
+        </label>
+      </div>
+
+
+      <div class="dash-table-wrapper" aria-live="polite">
+        <table class="tx-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Account</th>
+              <th>Category</th>
+              <th class="tx-amount-col">Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="tx-tbody">
+
+            <tr data-account="Everyday Checking">
+              <td>Nov 12</td>
+              <td>
+                <span class="tx-desc-main">Coffee shop</span>
+                <span class="tx-desc-meta">New York, US</span>
+              </td>
+              <td>Everyday Checking</td>
+              <td>Dining</td>
+              <td class="tx-amount negative">-$4.75</td>
+              <td><span class="tx-status-badge status-completed">Completed</span></td>
+            </tr>
+
+
+            <tr data-account="Everyday Checking">
+              <td>Nov 11</td>
+              <td>
+                <span class="tx-desc-main">Paycheck - Mission prep stipend</span>
+                <span class="tx-desc-meta">Hail Mary Training Center · Earth orbit program</span>
+              </td>
+              <td>Everyday Checking</td>
+              <td>Income</td>
+              <td class="tx-amount positive">+$1,850.00</td>
+              <td><span class="tx-status-badge status-completed">Completed</span></td>
+            </tr>
+
+
+            <tr data-account="High-Yield Savings">
+              <td>Nov 10</td>
+              <td>
+                <span class="tx-desc-main">Transfer to High-Yield Savings</span>
+                <span class="tx-desc-meta">Automatic monthly savings</span>
+              </td>
+              <td>High-Yield Savings</td>
+              <td>Transfer</td>
+              <td class="tx-amount neutral">-$250.00</td>
+              <td><span class="tx-status-badge status-completed">Completed</span></td>
+            </tr>
+
+
+            <tr data-account="Travel Card">
+              <td>Nov 08</td>
+              <td>
+                <span class="tx-desc-main">NightWatch crew sleep monitor</span>
+                <span class="tx-desc-meta">Blip-A · Erid · Habitat bay issue #3</span>
+              </td>
+              <td>Travel Card</td>
+              <td>Mission equipment</td>
+              <td class="tx-amount negative">-$480.00</td>
+              <td><span class="tx-status-badge status-completed">Completed</span></td>
+            </tr>
+
+
+            <tr data-account="Travel Card">
+              <td>Nov 07</td>
+              <td>
+                <span class="tx-desc-main">Rocky nutrient-burger vending pod</span>
+                <span class="tx-desc-meta">Rocky Plaza · Blip-A system</span>
+              </td>
+              <td>Travel Card</td>
+              <td>Food & supplies</td>
+              <td class="tx-amount negative">-$36.40</td>
+              <td><span class="tx-status-badge status-completed">Completed</span></td>
+            </tr>
+
+
+            <tr data-account="Everyday Checking">
+              <td>Nov 05</td>
+              <td>
+                <span class="tx-desc-main">Lab cultures & shielding gel</span>
+                <span class="tx-desc-meta">Project Hail Archive · mission storage</span>
+              </td>
+              <td>Everyday Checking</td>
+              <td>Research</td>
+              <td class="tx-amount negative">-$612.90</td>
+              <td><span class="tx-status-badge status-completed">Completed</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="lb-footer-disclaimer">
+    <div class="lb-disclaimer-section">
+      <h3>Important Notice</h3>
+
+      <div class="lb-disclaimer-grid">
+        <div class="lb-disc-item">Not a Real Bank</div>
+        <div class="lb-disc-item">No Real Accounts</div>
+        <div class="lb-disc-item">For Demo Use Only</div>
+      </div>
+
+      <p><strong>LunaBank is a fictional application created for QA automation and software testing portfolio
+          demonstrations.</strong></p>
+      <p>No actual banking, investment products, credit services, or financial accounts are provided here.</p>
+      <p>All content, labels, UI flows, and names exist solely for testing skills in UI automation, API testing,
+        accessibility testing, and performance testing.</p>
+      <p>Do not submit real personal or financial information.</p>
+
+      <p class="lb-disclaimer-id">Demo Build · 2025</p>
+    </div>
+  </footer>
+
+  <script>
+
+    const accountFilter = document.getElementById("tx-account-filter");
+    const txRows = document.querySelectorAll("#tx-tbody tr[data-account]");
+
+    accountFilter.addEventListener("change", () => {
+      const value = accountFilter.value;
+      txRows.forEach(row => {
+        const rowAccount = row.getAttribute("data-account");
+        if (value === "all" || rowAccount === value) {
+          row.style.display = "";
+        } else {
+          row.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
