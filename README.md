@@ -5,7 +5,7 @@ It simulates a simple online banking experience with login, registration, accoun
 
 Ongoing Project
 
-https://lunabank-qa.netlify.app/
+https://ivanayramirez-ux.github.io/lunabank-qa-webapp/
 
 ---
 
