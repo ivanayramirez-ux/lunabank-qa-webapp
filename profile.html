@@ -8,313 +8,310 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/moon-symbol.png">
-
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header class="lb-header">
-        <div class="lb-logo">
-            <img src="https://img.icons8.com/fluency/48/moon-symbol.png" class="lb-logo-icon" alt="Moon logo">
-            <a href="index.html">LunaBank</a>
-        </div>
+<header class="lb-header">
+    <div class="lb-logo">
+        <img src="https://img.icons8.com/fluency/48/moon-symbol.png" class="lb-logo-icon" alt="Moon logo">
+        <a href="index.html">LunaBank</a>
+    </div>
 
-        <div class="lb-header-right">
-            <a class="social-link" href="https://github.com/ivanayramirez-ux" target="_blank" aria-label="GitHub">
-                <img src="https://img.icons8.com/ios-glyphs/26/github.png" class="social-icon" alt="GitHub icon">
-            </a>
-            <a class="social-link" href="https://www.linkedin.com/in/ivana-ramirez-392381211/" target="_blank"
-                aria-label="LinkedIn">
-                <img src="https://img.icons8.com/ios-filled/26/linkedin.png" class="social-icon" alt="LinkedIn icon">
-            </a>
-        </div>
-    </header>
+    <div class="lb-header-right">
+        <a class="social-link" href="https://github.com/ivanayramirez-ux" target="_blank" aria-label="GitHub">
+            <img src="https://img.icons8.com/ios-glyphs/26/github.png" class="social-icon" alt="GitHub icon">
+        </a>
+        <a class="social-link" href="https://www.linkedin.com/in/ivana-ramirez-392381211/" target="_blank"
+           aria-label="LinkedIn">
+            <img src="https://img.icons8.com/ios-filled/26/linkedin.png" class="social-icon" alt="LinkedIn icon">
+        </a>
+    </div>
+</header>
 
-    <main class="profile-main" id="main-content">
-        <div class="profile-layout">
+<main class="profile-main" id="main-content">
+    <div class="profile-layout">
 
-            <section class="profile-card" aria-labelledby="profile-heading">
+        <section class="profile-card" aria-labelledby="profile-heading">
 
-                <!-- Top: avatar + basic identity -->
-                <header class="profile-header">
-                    <div class="profile-identity">
-                        <div class="profile-avatar-wrapper" aria-hidden="true">
-                            <img src="https://imagur.org/i/KYpv5RFU" alt="Astronaut profile" class="profile-avatar">
+            <!-- Top: avatar + basic identity -->
+            <header class="profile-header">
+                <div class="profile-identity">
+                    <div class="profile-avatar-wrapper" aria-hidden="true">
+                        <img src="https://imagur.org/i/KYpv5RFU" alt="Astronaut profile" class="profile-avatar">
+                    </div>
+
+                    <div class="profile-name-block">
+                        <h1 id="profile-heading" class="profile-name">
+                            Moon Grace
+                        </h1>
+                        <p class="profile-alias">
+                            Display name: <span>Moon</span>
+                        </p>
+                        <div class="profile-badges">
+                            <span class="badge badge-tier">LunaBlue • Personal</span>
+                            <span class="badge badge-status">Profile verified</span>
+                        </div>
+                        <a href="dashboard.html" class="tx-back profile-back-link-inside">
+                            ← Back to dashboard
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Summary chips -->
+            <section class="profile-summary-grid" aria-label="Profile summary">
+                <article class="profile-summary-card" data-profile-summary="balance">
+                    <h2>Total balance</h2>
+                    <p class="profile-summary-value">$17,828.89</p>
+                    <p class="profile-summary-sub">Across 3 active accounts</p>
+                </article>
+
+                <article class="profile-summary-card" data-profile-summary="last-signin">
+                    <h2>Last sign-in</h2>
+                    <p class="profile-summary-value">Today at 09:42 AM</p>
+                    <p class="profile-summary-sub">From Chrome on Windows</p>
+                </article>
+
+                <article class="profile-summary-card" data-profile-summary="security">
+                    <h2>Security</h2>
+                    <p class="profile-summary-value profile-summary-ok">Protected</p>
+                    <p class="profile-summary-sub">MFA &amp; login alerts enabled</p>
+                </article>
+            </section>
+
+            <!-- Two-column layout -->
+            <section class="profile-content-grid">
+
+                <!-- LEFT COLUMN -->
+                <div class="profile-column">
+
+                    <!-- Personal info -->
+                    <section class="profile-section"
+                             aria-labelledby="personal-info-heading"
+                             data-section="personal-info">
+                        <div class="profile-section-header">
+                            <h2 id="personal-info-heading">Personal information</h2>
                         </div>
 
-                        <div class="profile-name-block">
-                            <h1 id="profile-heading" class="profile-name">
-                                Moon Grace
-                            </h1>
-                            <p class="profile-alias">
-                                Display name: <span>Moon</span>
-                            </p>
-                            <div class="profile-badges">
-                                <span class="badge badge-tier">LunaBlue • Personal</span>
-                                <span class="badge badge-status">Profile verified</span>
+                        <div class="profile-fields">
+                            <div class="profile-field">
+                                <label for="pf-first-name">First name</label>
+                                <input id="pf-first-name" type="text" value="Moon" disabled>
                             </div>
-                            <a href="dashboard.html" class="tx-back profile-back-link-inside">
-                                ← Back to dashboard
+                            <div class="profile-field">
+                                <label for="pf-last-name">Last name</label>
+                                <input id="pf-last-name" type="text" value="Grace" disabled>
+                            </div>
+                            <div class="profile-field">
+                                <label for="pf-display-name">Display name</label>
+                                <input id="pf-display-name" type="text" value="Moon" disabled>
+                            </div>
+                            <div class="profile-field">
+                                <label for="pf-dob">Date of birth</label>
+                                <input id="pf-dob" type="date" value="1969-07-20" disabled>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Contact info -->
+                    <section class="profile-section"
+                             aria-labelledby="contact-info-heading"
+                             data-section="contact-address">
+                        <div class="profile-section-header">
+                            <h2 id="contact-info-heading">Contact &amp; address</h2>
+                            <button class="link-button" id="profile-contact-edit" type="button">
+                                Edit contact
+                            </button>
+                        </div>
+
+                        <div class="profile-fields">
+                            <div class="profile-field">
+                                <label for="pf-email">Primary email</label>
+                                <input id="pf-email" type="email" value="test@lunabank.com" disabled>
+                            </div>
+                            <div class="profile-field">
+                                <label for="pf-phone">Mobile phone</label>
+                                <input id="pf-phone" type="tel" value="+1 (555) 123-321" disabled>
+                            </div>
+                            <div class="profile-field">
+                                <label for="pf-address-line1">Mailing address</label>
+                                <input id="pf-address-line1" type="text" value="245 Lunar Crescent, Apt 12B" disabled>
+                            </div>
+                            <div class="profile-field profile-field-inline">
+                                <div>
+                                    <label for="pf-city">City</label>
+                                    <input id="pf-city" type="text" value="New York" disabled>
+                                </div>
+                                <div>
+                                    <label for="pf-state">State</label>
+                                    <input id="pf-state" type="text" value="NY" disabled>
+                                </div>
+                                <div>
+                                    <label for="pf-zip">ZIP</label>
+                                    <input id="pf-zip" type="text" value="10001" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- RIGHT COLUMN -->
+                <div class="profile-column">
+
+                    <!-- Security -->
+                    <section class="profile-section"
+                             aria-labelledby="security-heading"
+                             data-section="security">
+                        <div class="profile-section-header">
+                            <h2 id="security-heading">Security &amp; sign-in</h2>
+                            <a href="security.html" class="link-button">
+                                Manage security
                             </a>
                         </div>
-                    </div>
-                </header>
 
-                <!-- Summary chips -->
-                <section class="profile-summary-grid" aria-label="Profile summary">
-                    <article class="profile-summary-card" data-profile-summary="balance">
-                        <h2>Total balance</h2>
-                        <!-- id removed on purpose; use data-profile-summary instead -->
-                        <p class="profile-summary-value">$17,828.89</p>
-                        <p class="profile-summary-sub">Across 3 active accounts</p>
-                    </article>
+                        <ul class="profile-security-list">
+                            <li>
+                                <span>Multi-factor authentication</span>
+                                <span class="pill pill-on" id="security-mfa-pill">Enabled</span>
+                            </li>
+                            <li>
+                                <span>Biometric login on mobile</span>
+                                <span class="pill pill-on" id="security-bio-pill">Enabled</span>
+                            </li>
+                            <li>
+                                <span>Login alerts</span>
+                                <span class="pill pill-on" id="security-alerts-pill">Email &amp; SMS</span>
+                            </li>
+                            <li>
+                                <span>Device verification</span>
+                                <span class="pill pill-ok" id="security-devices-pill">Trusted devices: 3</span>
+                            </li>
+                        </ul>
+                    </section>
 
-                    <article class="profile-summary-card" data-profile-summary="last-signin">
-                        <h2>Last sign-in</h2>
-                        <p class="profile-summary-value">Today at 09:42 AM</p>
-                        <p class="profile-summary-sub">From Chrome on Windows</p>
-                    </article>
+                    <!-- Notifications -->
+                    <section class="profile-section"
+                             aria-labelledby="notifications-heading"
+                             data-section="notifications">
+                        <div class="profile-section-header">
+                            <h2 id="notifications-heading">Notifications &amp; preferences</h2>
+                        </div>
 
-                    <article class="profile-summary-card" data-profile-summary="security">
-                        <h2>Security</h2>
-                        <p class="profile-summary-value profile-summary-ok">Protected</p>
-                        <p class="profile-summary-sub">MFA &amp; login alerts enabled</p>
-                    </article>
-                </section>
+                        <div class="profile-toggle-list">
+                            <label class="toggle-row">
+                                <span>Balance alerts</span>
+                                <input type="checkbox" data-pref="balanceAlerts" checked>
+                                <span class="toggle-slider" aria-hidden="true"></span>
+                            </label>
 
-                <!-- Two-column layout -->
-                <section class="profile-content-grid">
+                            <label class="toggle-row">
+                                <span>Large transaction alerts</span>
+                                <input type="checkbox" data-pref="largeTransactions" checked>
+                                <span class="toggle-slider" aria-hidden="true"></span>
+                            </label>
 
-                    <!-- LEFT COLUMN -->
-                    <div class="profile-column">
+                            <label class="toggle-row">
+                                <span>Monthly statement ready</span>
+                                <input type="checkbox" data-pref="statementReady" checked>
+                                <span class="toggle-slider" aria-hidden="true"></span>
+                            </label>
 
-                        <!-- Personal info -->
-                        <section class="profile-section"
-                                 aria-labelledby="personal-info-heading"
-                                 data-section="personal-info">
-                            <div class="profile-section-header">
-                                <h2 id="personal-info-heading">Personal information</h2>
-                            </div>
+                            <label class="toggle-row">
+                                <span>Product news &amp; offers</span>
+                                <input type="checkbox" data-pref="marketing">
+                                <span class="toggle-slider" aria-hidden="true"></span>
+                            </label>
+                        </div>
+                    </section>
 
-                            <div class="profile-fields">
-                                <div class="profile-field">
-                                    <label for="pf-first-name">First name</label>
-                                    <input id="pf-first-name" type="text" value="Moon" disabled>
-                                </div>
-                                <div class="profile-field">
-                                    <label for="pf-last-name">Last name</label>
-                                    <input id="pf-last-name" type="text" value="Grace" disabled>
-                                </div>
-                                <div class="profile-field">
-                                    <label for="pf-display-name">Display name</label>
-                                    <input id="pf-display-name" type="text" value="Moon" disabled>
-                                </div>
-                                <div class="profile-field">
-                                    <label for="pf-dob">Date of birth</label>
-                                    <input id="pf-dob" type="date" value="1969-07-20" disabled>
-                                </div>
-                            </div>
-                        </section>
+                    <!-- Recent devices -->
+                    <section class="profile-section"
+                             aria-labelledby="devices-heading"
+                             data-section="devices">
+                        <div class="profile-section-header">
+                            <h2 id="devices-heading">Recent devices</h2>
+                        </div>
 
-                        <!-- Contact info -->
-                        <section class="profile-section"
-                                 aria-labelledby="contact-info-heading"
-                                 data-section="contact-address">
-                            <div class="profile-section-header">
-                                <h2 id="contact-info-heading">Contact &amp; address</h2>
-                                <button class="link-button" id="profile-contact-edit" type="button">
-                                    Edit contact
-                                </button>
-                            </div>
+                        <div class="profile-table-wrapper">
+                            <table class="profile-devices-table">
+                                <thead>
+                                <tr>
+                                    <th>Device</th>
+                                    <th>Location</th>
+                                    <th>Last active</th>
+                                    <th>Status</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Windows • Chrome</td>
+                                    <td>New York, US</td>
+                                    <td>Today · 09:42 AM</td>
+                                    <td><span class="pill pill-ok">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td>iPhone • LunaBank app</td>
+                                    <td>New York, US</td>
+                                    <td>Yesterday · 08:14 PM</td>
+                                    <td><span class="pill pill-ok">Trusted</span></td>
+                                </tr>
+                                <tr>
+                                    <td>MacBook • Safari</td>
+                                    <td>Blip-A, Tau Ceti</td>
+                                    <td>12.4 ly away</td>
+                                    <td><button class="link-button link-danger">Remove</button></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
 
-                            <div class="profile-fields">
-                                <div class="profile-field">
-                                    <label for="pf-email">Primary email</label>
-                                    <input id="pf-email" type="email" value="test@lunabank.com" disabled>
-                                </div>
-                                <div class="profile-field">
-                                    <label for="pf-phone">Mobile phone</label>
-                                    <input id="pf-phone" type="tel" value="+1 (555) 123-321" disabled>
-                                </div>
-                                <div class="profile-field">
-                                    <label for="pf-address-line1">Mailing address</label>
-                                    <input id="pf-address-line1" type="text" value="245 Lunar Crescent, Apt 12B"
-                                        disabled>
-                                </div>
-                                <div class="profile-field profile-field-inline">
-                                    <div>
-                                        <label for="pf-city">City</label>
-                                        <input id="pf-city" type="text" value="New York" disabled>
-                                    </div>
-                                    <div>
-                                        <label for="pf-state">State</label>
-                                        <input id="pf-state" type="text" value="NY" disabled>
-                                    </div>
-                                    <div>
-                                        <label for="pf-zip">ZIP</label>
-                                        <input id="pf-zip" type="text" value="10001" disabled>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="profile-actions-row" id="profile-contact-actions" hidden>
-                                <button class="btn btn-secondary" type="button" id="profile-contact-cancel">
-                                    Cancel
-                                </button>
-                                <button class="btn btn-primary" type="button" id="profile-contact-save">
-                                    Save changes
-                                </button>
-                            </div>
-
-                            <p class="profile-save-message" id="profile-contact-message" aria-live="polite"></p>
-                        </section>
-
-                    </div>
-
-                    <!-- RIGHT COLUMN -->
-                    <div class="profile-column">
-
-                        <!-- Security -->
-                        <section class="profile-section"
-                                 aria-labelledby="security-heading"
-                                 data-section="security">
-                            <div class="profile-section-header">
-                                <h2 id="security-heading">Security &amp; sign-in</h2>
-                                <a href="security.html" class="link-button">
-                                    Manage security
-                                </a>
-                            </div>
-
-                            <ul class="profile-security-list">
-                                <li>
-                                    <span>Multi-factor authentication</span>
-                                    <span class="pill pill-on" id="security-mfa-pill">Enabled</span>
-                                </li>
-                                <li>
-                                    <span>Biometric login on mobile</span>
-                                    <span class="pill pill-on" id="security-bio-pill">Enabled</span>
-                                </li>
-                                <li>
-                                    <span>Login alerts</span>
-                                    <span class="pill pill-on" id="security-alerts-pill">Email &amp; SMS</span>
-                                </li>
-                                <li>
-                                    <span>Device verification</span>
-                                    <span class="pill pill-ok" id="security-devices-pill">Trusted devices: 3</span>
-                                </li>
-                            </ul>
-                        </section>
-
-                        <!-- Notifications -->
-                        <section class="profile-section"
-                                 aria-labelledby="notifications-heading"
-                                 data-section="notifications">
-                            <div class="profile-section-header">
-                                <h2 id="notifications-heading">Notifications &amp; preferences</h2>
-                            </div>
-
-                            <div class="profile-toggle-list">
-                                <label class="toggle-row">
-                                    <span>Balance alerts</span>
-                                    <!-- id removed; locate via data-pref -->
-                                    <input type="checkbox" data-pref="balanceAlerts" checked>
-                                    <span class="toggle-slider" aria-hidden="true"></span>
-                                </label>
-
-                                <label class="toggle-row">
-                                    <span>Large transaction alerts</span>
-                                    <!-- id removed; locate via data-pref -->
-                                    <input type="checkbox" data-pref="largeTransactions" checked>
-                                    <span class="toggle-slider" aria-hidden="true"></span>
-                                </label>
-
-                                <label class="toggle-row">
-                                    <span>Monthly statement ready</span>
-                                    <!-- id removed; locate via data-pref -->
-                                    <input type="checkbox" data-pref="statementReady" checked>
-                                    <span class="toggle-slider" aria-hidden="true"></span>
-                                </label>
-
-                                <label class="toggle-row">
-                                    <span>Product news &amp; offers</span>
-                                    <!-- id removed; locate via data-pref -->
-                                    <input type="checkbox" data-pref="marketing">
-                                    <span class="toggle-slider" aria-hidden="true"></span>
-                                </label>
-                            </div>
-                        </section>
-
-                        <!-- Recent devices -->
-                        <section class="profile-section"
-                                 aria-labelledby="devices-heading"
-                                 data-section="devices">
-                            <div class="profile-section-header">
-                                <h2 id="devices-heading">Recent devices</h2>
-                            </div>
-
-                            <div class="profile-table-wrapper">
-                                <table class="profile-devices-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Device</th>
-                                            <th>Location</th>
-                                            <th>Last active</th>
-                                            <th>Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Windows • Chrome</td>
-                                            <td>New York, US</td>
-                                            <td>Today · 09:42 AM</td>
-                                            <td><span class="pill pill-ok">Active</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>iPhone • LunaBank app</td>
-                                            <td>New York, US</td>
-                                            <td>Yesterday · 08:14 PM</td>
-                                            <td><span class="pill pill-ok">Trusted</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>MacBook • Safari</td>
-                                            <td>Blip-A, Tau Ceti</td>
-                                            <td>12.4 ly away</td>
-                                            <td><button class="link-button link-danger">Remove</button></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </section>
-
-                    </div>
-                </section>
-
+                </div>
             </section>
-    </main>
 
-    <script src="profile.js"></script>
+            <!-- Global profile actions at bottom of card -->
+            <div class="profile-footer-actions">
+                <div class="profile-actions-row" id="profile-contact-actions" hidden>
+                    <button class="btn btn-secondary" type="button" id="profile-contact-cancel">
+                        Cancel
+                    </button>
+                    <button class="btn btn-primary" type="button" id="profile-contact-save">
+                        Save changes
+                    </button>
+                </div>
 
-    <footer class="lb-footer-disclaimer">
-        <div class="lb-disclaimer-section">
-            <h3>Important Notice</h3>
-
-            <div class="lb-disclaimer-grid">
-                <div class="lb-disc-item">Not a Real Bank</div>
-                <div class="lb-disc-item">No Real Accounts</div>
-                <div class="lb-disc-item">For Demo Use Only</div>
+                <p class="profile-save-message" id="profile-contact-message" aria-live="polite"></p>
             </div>
 
-            <p><strong>LunaBank is a fictional application created for QA automation and software testing portfolio
-                    demonstrations.</strong></p>
-            <p>No actual banking, investment products, credit services, or financial accounts are provided here.</p>
-            <p>All content, labels, UI flows, and names exist solely for testing skills in UI automation, API testing,
-                accessibility testing, and performance testing.</p>
-            <p>Do not submit real personal or financial information.</p>
+        </section>
 
-            <p class="lb-disclaimer-id">Demo Build · 2025</p>
+    </div>
+</main>
+
+<script src="profile.js"></script>
+
+<footer class="lb-footer-disclaimer">
+    <div class="lb-disclaimer-section">
+        <h3>Important Notice</h3>
+
+        <div class="lb-disclaimer-grid">
+            <div class="lb-disc-item">Not a Real Bank</div>
+            <div class="lb-disc-item">No Real Accounts</div>
+            <div class="lb-disc-item">For Demo Use Only</div>
         </div>
-    </footer>
+
+        <p><strong>LunaBank is a fictional application created for QA automation and software testing portfolio
+            demonstrations.</strong></p>
+        <p>No actual banking, investment products, credit services, or financial accounts are provided here.</p>
+        <p>All content, labels, UI flows, and names exist solely for testing skills in UI automation, API testing,
+            accessibility testing, and performance testing.</p>
+        <p>Do not submit real personal or financial information.</p>
+
+        <p class="lb-disclaimer-id">Demo Build · 2025</p>
+    </div>
+</footer>
 
 </body>
-
 </html>
