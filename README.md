@@ -1,6 +1,6 @@
 # LunaBank QA Webapp
 
-LunaBank is a small, mobile-friendly web app I built for a realistic place to practice UI automation and functional testing. It’s a fake digital banking site, but the layout and flows are similar to what you’d see at an actual bank—login, dashboard, profile management, security settings, transactions, statements, etc.
+LunaBank is a small, mobile-friendly web app I built for a realistic place to practice UI automation and functional testing. It’s a fake digital banking site, but the layout and flows are similar to what you’d see at an actual bank login, dashboard, profile management, security settings, transactions, statements, etc.
 
 There are also a couple of tiny references to one of my favorite novels, Project Hail Mary.
 
