@@ -1,109 +1,82 @@
 # LunaBank QA Webapp
 
-LunaBank is a small front-end banking app built specifically for QA automation practice.  
-It simulates a simple online banking experience with login, registration, account dashboard, and transfer flows that can be tested end-to-end using tools like Selenium, Playwright, Cypress, or any other UI automation stack.
+LunaBank is a small, mobile-friendly web app I built for a realistic place to practice UI automation and functional testing. It’s a fake digital banking site, but the layout and flows are similar to what you’d see at an actual bank login, dashboard, profile management, security settings, transactions, statements, etc.
 
-Ongoing Project
+There are also a couple of tiny references to one of my favorite novels, Project Hail Mary.
 
-https://lunabank-qa.netlify.app/
+Happy Testing!
+
+https://ivanayramirez-ux.github.io/lunabank-qa-webapp/
 
 ---
 
 ## 🎯 Purpose
 
-This project is not a real banking app.  
-It’s a controlled, front-end only playground where I can:
+What you can practice do with Lunabank:
 
-- Design realistic user journeys (login, forgot password, transfer funds).
-- Practice writing UI automation tests and page objects.
-- Build end-to-end regression scenarios for a “banking” domain.
-- Show recruiters and teams that I can build both the app under test and the automation around it.
+-UI automation (Selenium / Playwright / Cypress)
+
+-Form validation and state handling
+
+-Responsive/mobile testing
+
+-Negative test cases
+
+-Table interaction, filters, and modals
+
+-Accessibility checks
+
+-File downloads
+
+-Basic session-based state (localStorage)
+
+Everything is front-end only, no real backend involved.
 
 ---
 
 ## 🧩 Features
 
-### Authentication flows
+## Authentication
+- Login
+- Register
+- Forgot password (mock)
 
-- **Register**  
-  - Form validation for required fields.  
-  - Email + confirm email match check.  
-  - Strong password rules (length, uppercase, number, special character).  
-  - Terms & Conditions checkbox.  
-  - Success banner with redirect to Login.
+## Dashboard
+- Account summaries
+- Quick links
+- Transfer funds entry
+- Investment card with modal
+- Filterable accounts table
 
-- **Login**  
-  - Uses demo credentials:
-    - Email: `test@lunabank.com`
-    - Password: `EasyPass123`
-  - Locked-account demo:
-    - Email: `locked@lunabank.com`
-    - Any password → error banner.
-  - Inline validation + error banner:
-    - “Incorrect email or password.”
+## Profile
+- Editable contact information
+- Save/cancel behavior
+- Notification preferences
+- Recent devices list
+- Security status indicators
 
-- **Forgot Password**  
-  - Email validation for format.  
-  - If email is valid → green banner:
-    - “If an account exists for this email, we’ve sent a reset link.”
+## Security
+- MFA and biometric toggles
+- Login alert options (radio buttons)
+- Trusted device count
+- “Save changes” button that only enables when something is modified
 
-### Dashboard (`dashboard.html`)
+## Transactions
+- Dynamic list of recent activity
+- Negative/positive/neutral amounts
+- Useful for locator testing
 
-- Greeting banner: **“Welcome back, Moon”**.
-- Account table powered by a small data store (`accounts-store.js`):
-  - **Everyday Checking** – Checking – `$2,430.11` – Active  
-  - **High-Yield Savings** – Savings – `$15,723.54` – Active  
-  - **Travel Card** – Credit Card – `-$324.76` – Active
-- **Filter by type** dropdown:
-  - All / Checking / Savings / Credit.
-- **Transfer funds** button → navigates to `transfer.html`.
-- **Log out** button:
-  - Clears local storage and returns to `login.html`.
+## Statements
+- Includes a downloadable sample PDF
+- Good for file download automation cases
 
-### Transfer Funds (`transfer.html`)
+Everything is designed to be testable, including a few elements that are intentionally a bit harder to locate.
 
-- Fields:
-  - **From account** (Checking / Savings / Credit Card).
-  - **To account** (same options, must be different from From).
-  - **Amount** (required, positive number).
-- Validation:
-  - From / To must be selected.
-  - From and To cannot be the same.
-  - Amount must be a valid positive number.
-  - Insufficient funds check for non-credit accounts.
-- On success:
-  - Updates balances in `localStorage` via `accounts-store.js`.
-  - Shows green banner:
-    > “Transfer scheduled successfully. Transfer ID: TX-######”
-- Transfer effects appear back on the **Dashboard** balances.
+## Tech used
+- HTML / CSS
+- Vanilla JavaScript
+- `localStorage` for temporary state
+- Fully responsive layout
+- Optional mock API (JSON Server) for separate API testing
 
 ---
-
-## 🛠 Tech Stack
-
-- **HTML5** – structure and pages
-- **CSS3** – custom styling (no framework)
-- **Vanilla JavaScript** – form validation, state, and simple “session” logic
-- **`localStorage`** – stores account balances and reflects transfers
-
-No backend, no build step – this is a purely static app.
-
----
-
-## 📁 Project Structure
-
-```text
-lunabank/
-├── index.html            # Simple landing/home (optional entry point)
-├── login.html            # Sign in page
-├── register.html         # Create account page
-├── forgot-password.html  # Forgot password flow
-├── dashboard.html        # Account overview + logout + filter
-├── transfer.html         # Transfer form and validation
-├── styles.css            # Shared styling for all pages
-├── accounts-store.js     # LocalStorage-backed "account" data store
-├── dashboard.js          # Renders accounts + filtering on dashboard
-├── login.js              # Login validation and redirect to dashboard
-├── register.js           # Registration validation + success banner
-├── forgot-password.js    # Forgot password validation + banner
-└── transfer.js           # Transfer validation + updates balances
