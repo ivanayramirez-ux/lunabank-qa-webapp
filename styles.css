@@ -781,12 +781,7 @@ body {
 
 
 body.index-bg {
-  background-image: url("https://imagur.org/i/k3Pt2KJ9");
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: #020617;
+  background-color: #F6F8FF;
 }
 
 body.index-bg #main-content {
@@ -798,7 +793,7 @@ body.index-bg .lb-hero h1,
 body.index-bg .lb-hero p,
 body.index-bg .lb-features h2 {
   background: transparent !important;
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 body.index-bg .lb-features {
